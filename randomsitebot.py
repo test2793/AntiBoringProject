@@ -45,7 +45,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = update.message.from_user.id
     if await is_user_subscribed(user_id):
         # Создаем клавиатуру с кнопкой
-        keyboard = [["🎲 Открыть случайный сайт"]]
+        keyboard = [["🎲Открыть случайный сайт"]]
         reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
         await update.message.reply_text(
             "Привет! Нажми кнопку ниже, чтобы открыть случайный сайт.",
