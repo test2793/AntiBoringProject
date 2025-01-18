@@ -2,6 +2,18 @@ import random
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
 
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 4000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
 # Ваш токен бота
 TOKEN = "8114342844:AAFPrriZHADGQxhAt-G4Khaur0131IejkNY"
 # ID канала или группы (например, @username или ID)
